@@ -19,7 +19,7 @@ const App = () => {
   useEffect(() => {
     if (toDisplay && toDisplay.length === 1) {      
       axios
-        .get(`fullstack-proxy.onrender.com/api/weather?q=${toDisplay[0].capital[0]}&units=metric`)
+        .get(`https://fullstack-proxy.onrender.com/api/weather?q=${toDisplay[0].capital[0]}`)
         .then(response => setWeather(
           <>
             <p>Temperature {response.data.main.temp} Celsius</p>
